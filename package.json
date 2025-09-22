@@ -4,12 +4,13 @@
   "description": "Make your media a part of your knowledge. Sync your media items from MyAnimeList, AniList, and Simkl directly into your vault.",
   "main": "main.js",
   "scripts": {
-    "build": "tsc -noEmit -skipLibCheck && esbuild main.ts --bundle --platform=node --format=cjs --target=es2018 --outfile=main.js --minify --external:obsidian",
-    "build:fast": "esbuild main.ts --bundle --platform=node --format=cjs --target=es2018 --outfile=main.js --minify --external:obsidian",
-    "dev": "esbuild main.ts --bundle --watch --platform=node --format=cjs --target=es2018 --outfile=main.js --sourcemap=inline --external:obsidian"
+    "typecheck": "tsc -noEmit -skipLibCheck",
+    "build": "npm run typecheck && node esbuild.config.mjs production",
+    "build:fast": "node esbuild.config.mjs production",
+    "dev": "node esbuild.config.mjs",
+    "version": "node version-bump.mjs && git add manifest.json versions.json"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Zarakasi",
   "license": "MIT",
   "devDependencies": {
     "esbuild": "^0.17.3",
