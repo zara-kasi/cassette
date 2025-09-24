@@ -1,6 +1,6 @@
 import { App, PluginSettingTab, Setting } from 'obsidian';
 
-import { CassettePlugin } from './main'
+import CassettePlugin from './main'
 
 export class CassetteSettingTab extends PluginSettingTab {
 	plugin: CassettePlugin;
