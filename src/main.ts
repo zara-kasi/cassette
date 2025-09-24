@@ -1,6 +1,7 @@
 import { App, Editor, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Setting } from 'obsidian';
 
 // Remember to rename these classes and interfaces!
+import { CassetteSettingTab } from './setting/CassetteSettingTab';
 
 interface CassettePluginSettings {
 	mySetting: string;
@@ -83,17 +84,4 @@ export default class CassettePlugin extends Plugin {
 }
 
 
-class CassetteSettingTab extends PluginSettingTab {
-	plugin: CassettePlugin;
 
-	constructor(app: App, plugin: CassettePlugin) {
-		super(app, plugin);
-		this.plugin = plugin;
-	}
-
-	display(): void {
-		const {containerEl} = this;
-
-		containerEl.empty();
-	}
-}
