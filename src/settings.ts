@@ -35,5 +35,28 @@ export class CassetteSettingTab extends PluginSettingTab {
     const Display = section('Sync');
     const Template = section('Template');
     const About = section('About');
+    
+    
+    new Setting(About)
+      .setName('Author')
+      .setDesc(this.plugin.manifest.author);
+    new Setting(About)
+      .setName('Version')
+      .setDesc(this.plugin.manifest.version);
+    new Setting(About)
+      .setName('Privacy')
+      .setDesc('Cassette only talks to the APIs to fetch & update your media data. Nothing else is sent or shared—your data stays local.');
+
+    new Setting(About)
+      .setName('GitHub')
+      .setDesc('Get more info or report an issue.')
+      .addButton(button =>
+        button
+          .setClass('mod-cta')
+          .setButtonText('Open GitHub')
+          .onClick(() => {
+            window.open('https://github.com/zara-kasi/cassette', '_blank');
+          })
+      );
 	}
 }
