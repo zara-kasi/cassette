@@ -91,23 +91,8 @@ export default class CassettePlugin extends Plugin {
 	}
 }
 
-class SampleModal extends Modal {
-	constructor(app: App) {
-		super(app);
-	}
 
-	onOpen() {
-		const {contentEl} = this;
-		contentEl.setText('Woah!');
-	}
-
-	onClose() {
-		const {contentEl} = this;
-		contentEl.empty();
-	}
-}
-
-class SampleSettingTab extends PluginSettingTab {
+class CassetteSettingTab extends PluginSettingTab {
 	plugin: CassettePlugin;
 
 	constructor(app: App, plugin: CassettePlugin) {
