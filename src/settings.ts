@@ -15,7 +15,7 @@ export class CassetteSettingTab extends PluginSettingTab {
 
 		containerEl.empty();
 		const section = (title: string, startOpen = false) => {
-      const head = containerEl.createEl('h2', { text: title });
+      const head = containerEl.createEl('h1', { text: title });
       head.style.cursor = 'pointer';
       head.style.userSelect = 'none';
       head.style.margin = '1.2em 0 0.4em 0';
@@ -29,7 +29,7 @@ export class CassetteSettingTab extends PluginSettingTab {
     };
 
     const AniList = section('AniList');
-    const MAL = section('MyAnimeList');
+    const MAL = section('MAL');
     const Simkl = section('Simkl');
     const Setup = section('Setup');
     const Template = section('Template');
