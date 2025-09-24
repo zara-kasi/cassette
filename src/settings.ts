@@ -14,5 +14,26 @@ export class CassetteSettingTab extends PluginSettingTab {
 		const {containerEl} = this;
 
 		containerEl.empty();
+		const section = (title, startOpen = false) => {
+      const head = containerEl.createEl('h2', { text: title });
+      head.style.cursor = 'pointer';
+      head.style.userSelect = 'none';
+      head.style.margin = '1.2em 0 0.4em 0';
+      const body = containerEl.createDiv();
+      body.style.marginLeft = '1em';
+      body.style.display = startOpen ? 'block' : 'none';
+      head.addEventListener('click', () => {
+        body.style.display = body.style.display === 'none' ? 'block' : 'none';
+      });
+      return body;
+    };
+
+    const AniList = section('AniList');
+    const MAL = section('MyAnimeList');
+    const Simkl = section('Simkl');
+    const Setup = section('Setup');
+    const Templete = section('Templete');
+    const Display = section('Sync');
+    const About = section('About');
 	}
 }
