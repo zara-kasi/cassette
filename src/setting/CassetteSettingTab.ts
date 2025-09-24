@@ -1,4 +1,4 @@
-class CassetteSettingTab extends PluginSettingTab {
+export class CassetteSettingTab extends PluginSettingTab {
 	plugin: CassettePlugin;
 
 	constructor(app: App, plugin: CassettePlugin) {
