@@ -1,5 +1,6 @@
 // enter client id & secret
-import { Modal } from 'obsidian';
+import { Modal, App } from 'obsidian';
+import { CassetteSettingTab } from './settings';
 
 export class AuthModal extends Modal {
   constructor(app, config) {
