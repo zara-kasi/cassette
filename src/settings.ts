@@ -1,7 +1,7 @@
 import { App, PluginSettingTab, Setting } from 'obsidian';
 
 import CassettePlugin from './main'
-import { AuthModal } from 'src/auth/AuthenticationModal'
+import { AuthModal } from './auth/AuthenticationModal'
 
 export class CassetteSettingTab extends PluginSettingTab {
 	plugin: CassettePlugin;
