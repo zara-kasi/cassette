@@ -1,4 +1,6 @@
 import { Modal, App } from 'obsidian';
 import { CassetteSettingTab } from '../settings';
 
-export class AuthModal extends Modal {}
+export class AuthModal extends Modal {
+  constructor(app, config) {}
+}
